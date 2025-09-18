@@ -1,0 +1,52 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+    font-family: 'Press Start 2P', cursive;
+    
+    /* Add some padding for smaller screens */
+    padding: 1rem;
+    box-sizing: border-box;
+    
+    background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e, #00ffff);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+#gameCanvas {
+    /* --- NEW: Responsive Properties --- */
+    width: 100%;
+    max-width: 800px; /* The original width of your game */
+    height: auto;
+    aspect-ratio: 800 / 600; /* Maintains the 4:3 ratio */
+
+    background-color: #1a1a1a;
+    border: 2px solid #00ffff;
+}
+
+#creatorCredit {
+    position: absolute;
+    bottom: 25px;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    opacity: 0.7;
+    text-shadow: 2px 2px 4px #000000;
+}
